@@ -10,6 +10,7 @@
 #define debug_h
 
 #include <stdlib.h>
+#include <stdint.h>
 #include "board.h"
 #include "move.h"
 

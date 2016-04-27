@@ -9,6 +9,7 @@
 #ifndef magicnumbersgen_h
 #define magicnumbersgen_h
 
+#include <stdint.h>
 #include "board.h"
 
 void generate_magic_numbers_bishop();

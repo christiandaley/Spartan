@@ -16,6 +16,7 @@
 #define SEARCH_MODE_NONE 4
 
 #include <sys/time.h>
+#include <stdint.h>
 #include "movegen.h"
 
 #define UPDATE_SPEED 1000

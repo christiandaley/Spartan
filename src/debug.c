@@ -249,8 +249,9 @@ uint64_t perft(int depth) {
 
 void print_bitboard(BB bitboard) {
     engine_output("\n");
-    for (int b = 7; b >= 0;b--) {
-        for (int a = 0;a < 8;a++) {
+    int a, b;
+    for (b = 7; b >= 0;b--) {
+        for (a = 0;a < 8;a++) {
             engine_output("%d ", (bitboard & SQ_MASK(b * 8 + a)) != 0);
         }
         

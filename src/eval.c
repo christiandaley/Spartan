@@ -27,7 +27,7 @@ static const int Piece_Values[7][2] = {
     { 300, 315 }, // knights
     { 315, 325 }, // bishops
     { 910, 955 }, // queens
-    { 0,   0   }, // kings
+    { VALUE_INFINITE,   VALUE_INFINITE   }, // kings
 };
 
 static const int Square_Values[7][2][64] = {

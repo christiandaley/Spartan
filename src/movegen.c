@@ -7,6 +7,7 @@
 //
 
 #include <assert.h>
+#include <string.h>
 #include "movegen.h"
 #include "bitscan.h"
 #include "bitmasks.h"
@@ -479,8 +480,8 @@ void generate_king_moves(Board_t *board) {
 
 /* generates all legal responses to a single check. These are:
  1. King moves
- 3. Capturing the checker
- 2. Blocks (in case of a bishop/rook/queen checker)
+ 2. Capturing the checker
+ 3. Blocks (in case of a bishop/rook/queen checker)
  */
 void generate_evasions(Board_t *board, int checker_loc, int checker_type, int check_pattern) {
     global_move_stack.pl_count = 0;
@@ -909,7 +910,7 @@ int is_check(Board_t *board, int *checker_loc, int *checker_type, int *check_pat
 
 /* This function does the same thing as is_check(), but it calculates everything from scratch.
  This is (slightly) slower, but is needed in case there is not enough information about the last move that was made.
- For example, when Spartan is given an fen string to parse, or when a pawn has just been promoted or captured en passant */
+ For example, when Spartan is given an fen string to parse, or when a pawn has just been captured en passant */
 
 int is_check_full(Board_t *board, int *checker_loc, int *checker_type, int *check_pattern) {
     int sq = LS1B(FRIENDLY_KING(board));

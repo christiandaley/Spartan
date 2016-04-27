@@ -9,6 +9,7 @@
 #ifndef ttable_h
 #define ttable_h
 
+#include <stdint.h>
 #include "board.h"
 
 #define MB_TO_TT_SIZE(mb) ((mb * 1000000) / sizeof(TT_Entry_t))
